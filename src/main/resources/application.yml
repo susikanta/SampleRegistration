@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: 
+    driverClassName: org.h2.Driver
+  jpa:
+    hibernate.ddl-auto: create-drop
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-alias: sampleRegistration1
+    key-store: classpath:sampleRegistration1.p12
+    key-store-type: PKCS12
+    key-store-password: trustore
+    key-password: trustore
+
